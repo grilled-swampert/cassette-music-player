@@ -1,17 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <title></title>
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <title>Casette Music Player</title>
+    <link rel="stylesheet" href="src/styles.css">
+</head>
+<title>Casette Music Player</title>
+<body>
+    <div class = "cassettes">
+      <a href = "#mixtape-1">PAGE 01</a>
+      <a href = "#mixtape-2">PAGE 02</a>
+      <a href = "#mixtape-3">PAGE 03</a>
+      <a href = "#mixtape-4">PAGE 04</a>
+      <a href = "#mixtape-5">PAGE 05</a>
+      <a href = "#mixtape-6">PAGE 06</a>
+      <a href = "#mixtape-7">PAGE 07</a>
+    </div>
+
+    <div class = "controls">
+        <button class = "previous" onclick = "window.scrollBy(-100, 0)">
+          <svg viewBox = "0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path d = "M10.5 19 .5L3 12m0 0l7.5-7.5M3 12h18"/>
+          </svg>
+        </button>
+        <button class = "next" onclick = "window.scrollBy(100, 0)">
+          <svg viewBox ="0 0 24 24" stroke-width = "1.5" stroke = "currentColor">
+            <path d = "M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+          </svg>
+        </button>
+    </div>
+
+    <section id = "section-1">
+      <article class = "card">
+        <picture>
+          <img src = "\images\cat-muffs.png" height = "500" width = "500">
+        </picture>
+      </article>
+
+    </section>
+</body>
 </html>

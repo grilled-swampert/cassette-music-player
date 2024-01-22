@@ -23,7 +23,8 @@
         --focus: oklch(80% 90% var(--hue));
         --hue: 275;
 
-        background: radial-gradient(farthest-corner circle at bottom center in oklab, 
+        background: radial-gradient(
+            farthest-corner circle at bottom center in oklab, 
             oklch(from var(--surface-2) calc(l * 1.25) c h),
             var(--surface-1)
         ) fixed no-repeat;

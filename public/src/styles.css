@@ -55,7 +55,7 @@ section {
 }
 
 img {
-    width: 400px;
+    width: 600px;
     height: 80%;
     object-fit: cover;
     object-position: center;
@@ -71,4 +71,34 @@ img {
     img {
         width: 300px;
     }
+}
+
+@layer demo.color {
+  @property --hue {
+    syntax: '<angle>';
+    initial-value: 0turn;
+    inherits: false;
+  }
+  @keyframes hue-cycle { to {
+    --hue: 1turn;
+  }}
+  
+  :root {
+    --surface-1: oklch(40% 50% var(--hue));
+    --surface-2: oklch(50% 40% var(--hue));
+    
+    background: radial-gradient(farthest-corner circle at bottom center in oklab, 
+      oklch(from var(--surface-2) calc(l * 1.25) c h),
+      var(--surface-1)
+    ) fixed no-repeat;
+  }
+}
+
+@layer demo.scroll-driven-animation {
+  :root {
+    @supports (animation-timeline: scroll()) {
+      animation: hue-cycle linear both;
+      animation-timeline: scroll(y); 
+    }
+  }
 }

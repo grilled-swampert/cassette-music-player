@@ -1,9 +1,9 @@
 const stickySections = [...document.querySelectorAll('.sticky')];
 let images = [
     '/images/groceries.png',
-    '/images/relaxing.png',
     '/images/robot.png',
-    '/images/swinging.png'
+    '/images/plants.png',
+    '/images/cat-muffs.png'
 ];
 
 images.forEach(img => {
@@ -25,6 +25,6 @@ function transform(section) {
     const scrollSection = section.querySelector('.scroll_section');
      
     let percentage = ((window.scrollY - offsetTop) / window.innerHeight) * 100;
-    percentage = percentage < 0 ? 0 : percentage > 400 ? 400 : percentage; 
+    percentage = percentage < 0 ? 0 : percentage > 900 ? 900 : percentage; 
     scrollSection.style.transform = `translate3D(${-(percentage)}vw, 0, 0)`;
 }
